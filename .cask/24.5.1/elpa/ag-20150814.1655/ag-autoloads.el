@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ag" "ag.el" (21981 50982 0 0))
+;;;### (autoloads nil "ag" "ag.el" (22016 14449 0 0))
 ;;; Generated autoloads from ag.el
 
 (autoload 'ag "ag" "\
@@ -111,6 +111,10 @@ Kill all `ag-mode' buffers.
 Kill all `ag-mode' buffers other than the current buffer.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("ag-pkg.el") (22016 14449 367739 0))
 
 ;;;***
 

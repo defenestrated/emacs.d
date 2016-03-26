@@ -270,5 +270,14 @@
 ;; add to hook
 (add-hook 'processing-mode-hook 'processing-shortcuts)
 
+;; python 3
+;; (add-hook 'python-mode-hook #'(lambda () (setq py-python-command "python3")))
+
 (global-set-key (kbd "M-s-ß") (lambda () (interactive) (save-some-buffers "!")))
 ;; (global-set-key (kbd "M-x p") 'previous-multiframe-window)
+
+
+;; hs-mode hooks:
+(add-hook 'c-mode-common-hook   'hs-minor-mode)
+(add-hook 'js-mode-common-hook   'hs-minor-mode)
+(add-hook 'js2-mode-common-hook   'hs-minor-mode)

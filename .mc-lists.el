@@ -4,9 +4,12 @@
 (setq mc/cmds-to-run-for-all
       '(
         beginning-of-visual-line
+        c-electric-paren
+        c-electric-semi&comma
         electric-newline-and-maybe-indent
         end-of-visual-line
         indent-for-tab-command
+        kill-visual-line
         sgml-close-tag
         sgml-slash
         sgml-tag
@@ -15,5 +18,8 @@
 
 (setq mc/cmds-to-run-once
       '(
+        forward-sexp
+        ido-find-file
         js2-mode-show-node
+        mouse-set-secondary
         ))
