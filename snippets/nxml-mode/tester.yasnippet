@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: test
+# key: yatest
+# --
+two words: $1
+replacement: ${1:$(replace-regexp-in-string ".+ " "" yas/text)}.jpg
+$0

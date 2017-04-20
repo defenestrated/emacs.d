@@ -216,6 +216,8 @@ narrowed."
 ;; undo
 (global-set-key (kbd "C-M-_") 'undo-tree-undo)
 (global-set-key (kbd "C-_")   'undo-tree-undo)
+(defalias 'redo 'undo-tree-redo)
+(global-set-key (kbd "s-Z") 'redo)
 
 ;;mark current function
 (global-set-key (kbd "C-x C-p") 'mark-defun)
@@ -303,6 +305,7 @@ narrowed."
 
 (global-set-key (kbd "C-x C-o") 'ffip)
 (global-set-key (kbd "C-x C-g") 'ag)
+(global-set-key (kbd "C-c C-r") 'replace-regexp)
 
 ;; bookmarks
 (global-set-key (kbd "C-c M-t") 'bm-toggle)
@@ -351,6 +354,25 @@ narrowed."
 
 ;; foldign
 
-(global-set-key (kbd "C-c C-k") 'hs-hide-block)
-(global-set-key (kbd "C-c C-l") 'hs-show-block)
+(global-set-key (kbd "C-c C-k") 'hs-toggle-hiding)
+;; (global-set-key (kbd "C-c C-l") 'hs-show-block)
 (global-set-key (kbd "C-x p") 'previous-multiframe-window)
+
+
+;; wrapping
+(global-set-key (kbd "M-[") 'insert-pair)
+(global-set-key (kbd "M-{") 'insert-pair)
+(global-set-key (kbd "M-\"") 'insert-pair)
+(global-set-key (kbd "M-'") 'insert-pair)
+
+;; wdired
+(global-set-key (kbd "C-c C-w") 'wdired-change-to-wdired-mode)
+
+;; open recent
+;;(global-set-key (kbd "C-x f") 'recentf-open-files)
+
+;;processing-mode
+(add-hook 'processing-mode-hook
+          (lambda () (local-set-key (kbd "s-r") 'processing-sketch-run)))
+(add-hook 'processing-mode-hook
+          (lambda () (local-set-key (kbd "s-R") 'processing-sketch-present)))

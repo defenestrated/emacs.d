@@ -100,7 +100,7 @@
       echo-keystrokes 0.02
       inhibit-startup-message t
       transient-mark-mode t
-      shift-select-mode nil
+      shift-select-mode t
       require-final-newline t
       truncate-partial-width-windows nil
       delete-by-moving-to-trash nil
@@ -281,3 +281,18 @@
 (add-hook 'c-mode-common-hook   'hs-minor-mode)
 (add-hook 'js-mode-common-hook   'hs-minor-mode)
 (add-hook 'js2-mode-common-hook   'hs-minor-mode)
+
+;;terminal-specific
+(add-hook 'term-mode-hook (lambda()
+                            (setq yas-dont-activate t)))
+
+
+;;(require 'recentf)
+;;(recentf-mode 1)
+
+
+;;compilation
+(setq compilation-scroll-output t)
+
+;;markdown
+(setq markdown-preview-stylesheets (list "http://thomasf.github.io/solarized-css/solarized-light.min.css"))

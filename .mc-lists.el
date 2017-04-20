@@ -4,22 +4,34 @@
 (setq mc/cmds-to-run-for-all
       '(
         beginning-of-visual-line
+        c-electric-brace
+        c-electric-colon
         c-electric-paren
         c-electric-semi&comma
+        c-electric-slash
         electric-newline-and-maybe-indent
+        electric-pair-delete-pair
         end-of-visual-line
         indent-for-tab-command
         kill-visual-line
+        markdown-exdent-or-delete
+        ns-copy-including-secondary
         sgml-close-tag
         sgml-slash
         sgml-tag
+        sh-assignment
         yas-expand
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        c-electric-star
         forward-sexp
         ido-find-file
         js2-mode-show-node
+        mouse-save-then-kill
+        mouse-set-region
         mouse-set-secondary
+        save-and-run
+        smex
         ))
