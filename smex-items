@@ -1,0 +1,21 @@
+
+;; ----- smex-history -----
+(
+ package-delete
+ customize-set-variable
+ package-install
+ write-file
+ customize-variable
+ eval-buffer
+ cd
+)
+
+;; ----- smex-data -----
+(
+ (eval-buffer . 2)
+ (package-install . 6)
+ (customize-variable . 1)
+ (write-file . 3)
+ (customize-set-variable . 1)
+ (package-delete . 1)
+)
