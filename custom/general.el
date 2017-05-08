@@ -270,3 +270,7 @@
 
 ;;markdown
 (setq markdown-preview-stylesheets (list "http://thomasf.github.io/solarized-css/solarized-light.min.css"))
+
+
+;; open pde files in processing
+(add-to-list 'auto-mode-alist '("\\.pde\\'" . processing-mode))
