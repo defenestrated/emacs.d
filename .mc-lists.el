@@ -9,6 +9,7 @@
         c-electric-paren
         c-electric-semi&comma
         c-electric-slash
+        c-indent-line-or-region
         electric-newline-and-maybe-indent
         electric-pair-delete-pair
         end-of-visual-line
@@ -34,4 +35,5 @@
         mouse-set-secondary
         save-and-run
         smex
+        undo-tree-visualize
         ))

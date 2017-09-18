@@ -1,0 +1,50 @@
+
+;; ----- smex-history -----
+(
+ write-file
+ server-start
+ markdown-live-preview-mode
+ gfm-mode
+ web-mode
+ package-install
+ replace-regexp
+)
+
+;; ----- smex-data -----
+(
+ (eval-buffer . 3)
+ (package-install . 8)
+ (customize-variable . 1)
+ (write-file . 13)
+ (customize-set-variable . 3)
+ (package-delete . 1)
+ (customize . 1)
+ (yas-reload-all . 1)
+ (yas-new-snippet . 1)
+ (processing-mode . 1)
+ (yas-visit-snippet-file . 3)
+ (describe-key . 1)
+ (describe-function . 1)
+ (pwd . 1)
+ (web-mode . 3)
+ (package-list-packages . 1)
+ (find-file-in-project . 1)
+ (replace-string . 7)
+ (isearch-exit . 1)
+ (eval-expression . 1)
+ (eval-last-sexp . 1)
+ (eval-region . 3)
+ (re-builder . 3)
+ (query-replace-regexp . 4)
+ (goto-char . 2)
+ (revert-buffer . 1)
+ (align-regexp . 1)
+ (diff . 1)
+ (query-replace . 1)
+ (sgml-pretty-print . 1)
+ (replace-regexp . 1)
+ (markdown-live-preview-mode . 3)
+ (gfm-mode . 1)
+ (markdown-preview . 1)
+ (server-start . 3)
+)

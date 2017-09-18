@@ -1,7 +1,7 @@
 ;; appearance
 
 (setq sml/no-confirm-load-theme t)
-(load-theme 'zenburn t)
+(load-theme 'alect-dark t)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (require 'smart-mode-line)
 (sml/setup)
@@ -143,32 +143,6 @@
 
 (add-hook 'before-save-hook 'live-cleanup-whitespace)
 
-;; savehist keeps track of some history
-(setq savehist-additional-variables
-      ;; search entries
-      '(search ring regexp-search-ring)
-      ;; save every minute
-      savehist-autosave-interval 60
-      ;; keep the home clean
-      savehist-file (concat live-tmp-dir "savehist"))
-(savehist-mode t)
-
-(load "backup-dir.el")
-(require 'backup-dir)
-(make-variable-buffer-local 'backup-inhibited)
-(setq bkup-backup-directory-info
-      `((t ,live-backups-dir ok-create full-path prepend-name)))
-
-(setq auto-save-file-name-transforms `((".*" ,(concat live-autosaves-dir "\\1") t)))
-(setq backup-by-copying t)
-(setq backup-directory-alist `((".*" . ,live-backups-dir)))
-(setq auto-save-list-file-name (concat live-autosaves-dir "autosave-list"))
-
-(setq delete-old-versions t
-      kept-new-versions 6
-      kept-old-versions 2
-      version-control t)
-
 ;; OS X specific configuration
 ;; ---------------------------
 
@@ -296,3 +270,17 @@
 
 ;;markdown
 (setq markdown-preview-stylesheets (list "http://thomasf.github.io/solarized-css/solarized-light.min.css"))
+
+
+;; open pde files in processing
+(add-to-list 'auto-mode-alist '("\\.pde\\'" . processing-mode))
+
+;; scroll one line at a time (less "jumpy" than defaults)
+
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 2))) ;; one line at a time
+
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+(setq scroll-step 1) ;; keyboard scroll one line at a time
