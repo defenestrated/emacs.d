@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("textchunk update"
+ (filename . "~/Active-Work/cda/projects/c2/c2cda-2017/lcd_p5/assets/js/classes.js")
+ (front-context-string . "\n    // console.")
+ (rear-context-string . " }\n\n  update() {")
+ (position . 861))
+("key commands"
+ (filename . "~/Active-Work/cda/projects/c2/c2cda-2017/lcd_p5/assets/js/main.js")
+ (front-context-string . "\n    case \"1\": /")
+ (rear-context-string . "tch(event.key) {")
+ (position . 3069))
+("textchunk init"
+ (filename . "~/Active-Work/cda/projects/c2/c2cda-2017/lcd_p5/assets/js/classes.js")
+ (front-context-string . "\n    this.text =")
+ (rear-context-string . "\n  }\n\n  init() {")
+ (position . 386))
+)
