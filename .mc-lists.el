@@ -35,4 +35,5 @@
         mouse-set-secondary
         save-and-run
         smex
+        undo-tree-visualize
         ))
