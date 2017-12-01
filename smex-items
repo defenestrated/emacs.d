@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ package-install
  replace-regexp
  web-mode
  server-start
  flymake-mode
  query-replace
  pwd
- quickurl-edit-urls
 )
 
 ;; ----- smex-data -----
 (
  (eval-buffer . 3)
- (package-install . 8)
+ (package-install . 9)
  (customize-variable . 1)
  (write-file . 20)
  (customize-set-variable . 3)
