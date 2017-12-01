@@ -14,6 +14,7 @@
         electric-pair-delete-pair
         end-of-visual-line
         indent-for-tab-command
+        kill-region
         kill-visual-line
         markdown-exdent-or-delete
         ns-copy-including-secondary

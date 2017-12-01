@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- write-file
- server-start
- markdown-live-preview-mode
- gfm-mode
- web-mode
- package-install
  replace-regexp
+ web-mode
+ server-start
+ flymake-mode
+ query-replace
+ pwd
+ quickurl-edit-urls
 )
 
 ;; ----- smex-data -----
@@ -15,7 +15,7 @@
  (eval-buffer . 3)
  (package-install . 8)
  (customize-variable . 1)
- (write-file . 13)
+ (write-file . 20)
  (customize-set-variable . 3)
  (package-delete . 1)
  (customize . 1)
@@ -25,8 +25,8 @@
  (yas-visit-snippet-file . 3)
  (describe-key . 1)
  (describe-function . 1)
- (pwd . 1)
- (web-mode . 3)
+ (pwd . 2)
+ (web-mode . 4)
  (package-list-packages . 1)
  (find-file-in-project . 1)
  (replace-string . 7)
@@ -40,11 +40,13 @@
  (revert-buffer . 1)
  (align-regexp . 1)
  (diff . 1)
- (query-replace . 1)
+ (query-replace . 4)
  (sgml-pretty-print . 1)
- (replace-regexp . 1)
- (markdown-live-preview-mode . 3)
+ (replace-regexp . 10)
+ (markdown-live-preview-mode . 4)
  (gfm-mode . 1)
  (markdown-preview . 1)
- (server-start . 3)
+ (server-start . 4)
+ (quickurl-edit-urls . 1)
+ (flymake-mode . 1)
 )
