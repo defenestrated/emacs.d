@@ -52,6 +52,8 @@
 
 ;; autocomplete
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq ac-js2-evaluate-calls t)
 
 ;; ffip
 (setq ffip-limit 4096)

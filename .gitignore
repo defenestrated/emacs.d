@@ -19,3 +19,5 @@ projectile.cache
 auto-save-list
 backups
 autosaves
+/.cask/*
+Cask
