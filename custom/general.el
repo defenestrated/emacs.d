@@ -255,9 +255,7 @@
 
 
 ;; hs-mode hooks:
-(add-hook 'c-mode-common-hook   'hs-minor-mode)
-(add-hook 'js-mode-common-hook   'hs-minor-mode)
-(add-hook 'js2-mode-common-hook   'hs-minor-mode)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;terminal-specific
 (add-hook 'term-mode-hook (lambda()

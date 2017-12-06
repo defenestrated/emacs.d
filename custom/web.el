@@ -4,6 +4,8 @@
      (lambda () (flymake-mode t)))
 
 ;; mode hooks
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.jst\\.tpl$" . html-mode))
 
 
