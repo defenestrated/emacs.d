@@ -13,7 +13,7 @@
 ;; (setq ns-auto-hide-menu-bar t)
 (tool-bar-mode 0)
 (global-visual-line-mode t)
-(adaptive-wrap-prefix-mode t)
+(adaptive-wrap-prefix-mode 1)
 
 (delete-selection-mode t)
 ;;(set-variable shift-select-mode t)
@@ -285,3 +285,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
+
+
+;; make line indenting better:
+(setq adaptive-wrap-prefix-mode t)

@@ -376,3 +376,13 @@ narrowed."
           (lambda () (local-set-key (kbd "s-r") 'processing-sketch-run)))
 (add-hook 'processing-mode-hook
           (lambda () (local-set-key (kbd "s-R") 'processing-sketch-present)))
+
+;; company auto-complete:
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+;; whitespace:
+(global-set-key (kbd "C-c C-o C-k") 'delete-whitespace-rectangle)

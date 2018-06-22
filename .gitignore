@@ -22,3 +22,6 @@ autosaves
 /.cask/*
 Cask
 smex-items
+tramp
+tramp
+.mc-lists.el
