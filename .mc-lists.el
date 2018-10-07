@@ -10,6 +10,7 @@
         c-electric-semi&comma
         c-electric-slash
         c-indent-line-or-region
+        comment-or-uncomment-region-or-line
         electric-newline-and-maybe-indent
         electric-pair-delete-pair
         end-of-visual-line
@@ -22,14 +23,19 @@
         sgml-slash
         sgml-tag
         sh-assignment
+        web-mode-element-insert
         yas-expand
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        ag
         c-electric-star
+        end-of-buffer
         forward-sexp
         ido-find-file
+        ido-switch-buffer
+        isearch-printing-char
         js2-mode-show-node
         mouse-save-then-kill
         mouse-set-region

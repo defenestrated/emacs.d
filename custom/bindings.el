@@ -270,8 +270,25 @@ narrowed."
 (global-set-key (kbd "C-M-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-M-r") 'isearch-backward-regexp)
 
+(defun isearch-exit-mark-match ()
+  "Exit isearch and mark the current match."
+  (interactive)
+  (isearch-exit)
+  (push-mark isearch-other-end)
+  (activate-mark))
+
+(define-key isearch-mode-map (kbd "<C-return>") #'isearch-exit-mark-match)
+
+
 ;; Jump to a definition in the current file.
 (global-set-key (kbd "C-x C-i") 'idomenu)
+
+(defun live-recentf-ido-find-file ()
+  "Find a recent file using ido."
+  (interactive)
+  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
+    (when file
+      (find-file file))))
 
 ;; File
 (global-set-key (kbd "C-x M-f")   'ido-find-file-other-window)

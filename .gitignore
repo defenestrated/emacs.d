@@ -25,3 +25,6 @@ smex-items
 tramp
 tramp
 .mc-lists.el
+eshell/history
+network-security.data
+tramp

@@ -8,6 +8,18 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
@@ -45,7 +57,7 @@
  '(ns-antialias-text t)
  '(package-selected-packages
    (quote
-    (prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smartparens smart-mode-line projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-jshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
+    (typed-clojure-mode csv-mode multi-term prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smart-mode-line smartparens projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-gjshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
  '(processing-location "/usr/local/bin/processing-java")
  '(processing-sketchbook-dir "~/code/Processing")
  '(yas-global-mode t nil (yasnippet)))

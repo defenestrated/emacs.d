@@ -6,6 +6,7 @@
 (require 'clojure-mode-extra-font-locking)
 
 (setq auto-mode-alist (append '(("\\.cljs$" . clojure-mode)
+                                ("\\.clj$" . clojure-mode)
                                 ("\\.cljx$" . clojure-mode)
                                 ("\\.cljc$" . clojure-mode)
                                 ("\\.boot$" . clojure-mode)
@@ -17,8 +18,10 @@
   (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'subword-mode)
   (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'rainbow-delimiters-mode)
   (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'paredit-mode)
+  (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'yas-minor-mode)
   (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'smartparens-strict-mode)
-  (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'rainbow-delimiters-mode))
+  (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'rainbow-delimiters-mode)
+  (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'adaptive-wrap-prefix-mode))
 
 ;; refactor
 (require 'clj-refactor)
@@ -29,7 +32,6 @@
 (add-hook 'clojure-mode-hook (lambda () (yas/minor-mode 1)))
 
 (define-key clojure-mode-map (kbd "C-:") 'clojure-toggle-keyword-string)
-(define-key clojure-mode-map (kbd "C->") 'cljr-cycle-coll)
 
 (add-hook 'clojure-mode-hook 'typed-clojure-mode)
 
@@ -82,7 +84,7 @@
 (require 'cider)
 
 (add-hook 'clojure-mode-hook 'cider-mode)
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'eldoc-mode)
 
 (setq cider-repl-use-pretty-printing t)
 

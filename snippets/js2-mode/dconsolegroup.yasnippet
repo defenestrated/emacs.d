@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: debug console group
+# key: dcng
+# binding: C-c C-g
+# expand-env: ((yas-wrap-around-region 't))
+# --
+if (debug) console.group("$1")
+   $0
+if (debug) console.groupEnd()$2

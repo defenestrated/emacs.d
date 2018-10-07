@@ -177,6 +177,13 @@
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 
+(defun force-yasnippet-off ()
+  (yas-minor-mode -1)
+  (setq yas-dont-activate t))
+
+(add-hook 'term-mode-hook #'force-yasnippet-off)
+(add-hook 'shell-mode-hook #'force-yasnippet-off)
+
 ;; Ignore .DS_Store files with ido mode
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 
