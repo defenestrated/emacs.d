@@ -403,3 +403,6 @@ narrowed."
 
 ;; whitespace:
 (global-set-key (kbd "C-c C-o C-k") 'delete-whitespace-rectangle)
+
+;; don't ever show the font picker
+(global-unset-key (kbd "s-t"))

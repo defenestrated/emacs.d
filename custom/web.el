@@ -18,6 +18,8 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
 
+(add-hook 'web-mode 'emmet-mode)
+
 ;;(require 'company)
 ;;(require 'company-tern)
 

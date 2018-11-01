@@ -1,10 +1,8 @@
-;; -*- emacs-lisp -*- <16/10/03 13:41:50 /Users/sam/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/02/12 12:36:28 /Users/sam/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" nil "sudo" nil nil]
-  nil)
- (["sudo" "root" "Hal" nil nil]
+((["sudo" "root" "Hal" nil nil]
   ("locale" "LC_ALL=C")
   ("uname" "Darwin 15.6.0")
   ("test" "test")
@@ -21,4 +19,6 @@
   ("gid-integer" 0)
   ("file-exists" "test -e")
   ("uid-integer" 0)
-  ("git" "\\git")))
+  ("git" "\\git"))
+ (["scp" "pi" "169.254.149.56" nil nil]
+  nil))
