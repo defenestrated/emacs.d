@@ -406,3 +406,15 @@ narrowed."
 
 ;; don't ever show the font picker
 (global-unset-key (kbd "s-t"))
+
+;; add lines after point
+(defun sg-addline ()
+  "add new line after point"
+  (interactive)
+  (let ((start (point)))
+    (end-of-visual-line)
+    (newline)
+    (goto-char start))
+  )
+
+(global-set-key (kbd "<C-return>") 'sg-addline)

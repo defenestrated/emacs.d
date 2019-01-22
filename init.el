@@ -57,7 +57,7 @@
  '(ns-antialias-text t)
  '(package-selected-packages
    (quote
-    (emmet-mode typed-clojure-mode csv-mode multi-term prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smart-mode-line smartparens projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-gjshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
+    (cider company-tern jsx-mode emmet-mode typed-clojure-mode csv-mode multi-term prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smart-mode-line smartparens projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-gjshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
  '(processing-location "/usr/local/bin/processing-java")
  '(processing-sketchbook-dir "~/code/Processing")
  '(yas-global-mode t nil (yasnippet)))
