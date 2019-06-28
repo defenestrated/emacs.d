@@ -60,7 +60,6 @@ narrowed."
     (goto-char (point-max))
     (insert form)
     (cider-repl-return)))
-
 (defun split-window-vertical (&optional number)
   "Split the current window into `number' windows"
   (interactive "P")
@@ -395,7 +394,9 @@ narrowed."
           (lambda () (local-set-key (kbd "s-R") 'processing-sketch-present)))
 
 ;; company auto-complete:
+
 (with-eval-after-load 'company
+  (add-to-list 'company-backends 'company-jedi)
   (define-key company-active-map (kbd "M-n") nil)
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") #'company-select-next)

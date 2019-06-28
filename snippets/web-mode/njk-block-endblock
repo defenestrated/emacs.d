@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: nunjuck block/endblock
+# key: njb
+# --
+{% block $1 %}$2{% endblock %}$0

@@ -52,6 +52,8 @@
 
 ;; autocomplete
 (add-hook 'after-init-hook 'global-company-mode)
+(setq company-dabbrev-downcase nil)
+
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (setq ac-js2-evaluate-calls t)
 
@@ -84,6 +86,8 @@
 (require 'recentf)
 (setq recentf-save-file (concat live-tmp-dir "recentf")
       recentf-max-saved-items 200)
+(add-to-list 'recentf-exclude no-littering-var-directory)
+(add-to-list 'recentf-exclude no-littering-etc-directory)
 (recentf-mode t)
 
 ;;When you visit a file, point goes to the last place where it was
@@ -181,6 +185,12 @@
   (yas-minor-mode -1)
   (setq yas-dont-activate t))
 
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+        "~/.emacs.d/custom/snippets-extra" ;; the yasmate collection
+        ))
+
+
 (add-hook 'term-mode-hook #'force-yasnippet-off)
 (add-hook 'shell-mode-hook #'force-yasnippet-off)
 
@@ -268,11 +278,6 @@
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)))
 
-
-;;(require 'recentf)
-;;(recentf-mode 1)
-
-
 ;;compilation
 (setq compilation-scroll-output t)
 
@@ -296,3 +301,9 @@
 
 ;; make line indenting better:
 (setq adaptive-wrap-prefix-mode t)
+
+;; open new files in extant window
+(setq ns-pop-up-frames nil)
+
+;; start server for terminal to do emacsclient
+(server-start)

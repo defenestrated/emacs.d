@@ -26,6 +26,7 @@
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
+(require 'no-littering)
 
 (add-to-list 'load-path "~/.emacs.d/lib")
 (add-to-list 'load-path "~/.emacs.d/custom")
@@ -43,11 +44,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(company-idle-delay 0.01)
  '(compilation-scroll-output t)
  '(custom-safe-themes
    (quote
     ("e56f1b1c1daec5dbddc50abd00fcd00f6ce4079f4a7f66052cf16d96412a09a9" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" default)))
+ '(delete-auto-save-files t)
+ '(delete-by-moving-to-trash nil)
+ '(delimit-columns-before "")
  '(electric-pair-mode t)
  '(initial-major-mode (quote text-mode))
  '(initial-scratch-message "
@@ -57,9 +62,11 @@
  '(ns-antialias-text t)
  '(package-selected-packages
    (quote
-    (cider company-tern jsx-mode emmet-mode typed-clojure-mode csv-mode multi-term prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smart-mode-line smartparens projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-gjshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
+    (yasnippet-snippets no-littering cider company-tern jsx-mode emmet-mode typed-clojure-mode csv-mode multi-term prettier-js vmd-mode markdown-mode python-mode web-beautify ac-js2 ag js2-mode php-mode rainbow-delimiters zenburn-theme yaml-mode win-switch websocket web-server web-mode use-package undo-tree smex smart-mode-line smartparens projectile prodigy processing-snippets processing-mode popwin pallet nyan-mode markdown-preview-eww markdown-mode+ magit isearch+ ido-vertical-mode ido-ubiquitous idle-highlight-mode htmlize highlight flymake-gjshint flymake-cursor flymake flycheck-cask flx-ido find-file-in-project expand-region exec-path-from-shell drag-stuff company clojure-mode-extra-font-locking clj-refactor arduino-mode alect-themes adaptive-wrap)))
  '(processing-location "/usr/local/bin/processing-java")
  '(processing-sketchbook-dir "~/code/Processing")
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
  '(yas-global-mode t nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
