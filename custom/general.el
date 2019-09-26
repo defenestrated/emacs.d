@@ -11,9 +11,15 @@
 (set-frame-parameter nil 'unsplittable t)
 
 ;; (setq ns-auto-hide-menu-bar t)
+(package-initialize t)
 (tool-bar-mode 0)
-(global-visual-line-mode t)
-(adaptive-wrap-prefix-mode 1)
+
+(setq-default adaptive-wrap-extra-indent 2)
+(add-hook 'visual-line-mode-hook #'adaptive-wrap-prefix-mode)
+(global-visual-line-mode +1)
+
+;; (global-visual-line-mode t)
+;; (adaptive-wrap-prefix-mode 1)
 
 (delete-selection-mode t)
 ;;(set-variable shift-select-mode t)
@@ -52,6 +58,7 @@
 
 ;; autocomplete
 (add-hook 'after-init-hook 'global-company-mode)
+(setq company-global-modes '(not python-mode py-shell-mode))
 (setq company-dabbrev-downcase nil)
 
 (add-hook 'js2-mode-hook 'ac-js2-mode)
@@ -266,6 +273,7 @@
 
 ;; python 3
 ;; (add-hook 'python-mode-hook #'(lambda () (setq py-python-command "python3")))
+;; (setq python-shell-interpreter "python3")
 
 (global-set-key (kbd "M-s-ß") (lambda () (interactive) (save-some-buffers "!")))
 ;; (global-set-key (kbd "M-x p") 'previous-multiframe-window)
@@ -277,6 +285,9 @@
 ;;terminal-specific
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)))
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;;compilation
 (setq compilation-scroll-output t)
@@ -307,3 +318,7 @@
 
 ;; start server for terminal to do emacsclient
 (server-start)
+
+;; python jedi
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)                 ; optional

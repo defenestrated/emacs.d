@@ -8,12 +8,17 @@
         c-electric-star
         indent-for-tab-command
         kill-visual-line
+        py-electric-colon
+        wdired-next-line
+        wdired-previous-line
         web-mode-element-insert
         ))
 
 (setq mc/cmds-to-run-once
       '(
         electric-pair-delete-pair
+        live-delete-whitespace-except-one
         mouse-set-region
         save-and-run
+        wdired-finish-edit
         ))
