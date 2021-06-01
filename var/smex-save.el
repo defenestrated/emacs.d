@@ -1,26 +1,26 @@
 
 ;; ----- smex-history -----
 (
+ web-mode
+ html-mode
+ text-mode
  replace-regexp
  write-file
- delete-trailing-whitespace
- delete-horizontal-space
- replace-string
- adaptive-wrap-prefix-mode
- delete-whitespace-rectangle
+ markdown-mode
+ find-name-dired
 )
 
 ;; ----- smex-data -----
 (
  (ispell-buffer . 1)
- (write-file . 40)
+ (write-file . 58)
  (paredit-mode . 6)
  (js2-mode . 2)
  (jsx-mode . 2)
  (customize-set-variable . 1)
  (eval-last-sexp . 1)
  (ansi-term . 2)
- (package-install . 9)
+ (package-install . 12)
  (delete-whitespace-rectangle . 2)
  (describe-function . 3)
  (clear-rectangle . 1)
@@ -28,21 +28,21 @@
  (hlt-unhighlight-region . 1)
  (revert-buffer . 1)
  (read-only-mode . 1)
- (yas-reload-all . 1)
+ (yas-reload-all . 2)
  (recover-this-file . 1)
- (query-replace . 9)
+ (query-replace . 13)
  (adaptive-wrap-prefix-mode . 6)
- (replace-string . 13)
+ (replace-string . 23)
  (prettify-symbols-mode . 2)
- (sgml-pretty-print . 1)
+ (sgml-pretty-print . 2)
  (yas-insert-snippet . 2)
- (yas-new-snippet . 1)
- (yas-visit-snippet-file . 1)
- (html-mode . 1)
- (web-mode . 1)
+ (yas-new-snippet . 2)
+ (yas-visit-snippet-file . 2)
+ (html-mode . 2)
+ (web-mode . 3)
  (pwd . 2)
- (query-replace-regexp . 2)
- (replace-regexp . 49)
+ (query-replace-regexp . 5)
+ (replace-regexp . 60)
  (describe-key . 5)
  (processing-mode . 1)
  (jedi:install-server . 7)
@@ -59,4 +59,20 @@
  (jedi-mode . 3)
  (delete-horizontal-space . 1)
  (delete-trailing-whitespace . 1)
+ (quit-window . 1)
+ (customize-face . 1)
+ (set-variable . 1)
+ (eval-expression . 1)
+ (linum-mode . 2)
+ (re-builder . 1)
+ (string-inflection-kebab-case . 11)
+ (skewer-mode . 2)
+ (run-skewer . 3)
+ (skewer-html-mode . 2)
+ (list-skewer-clients . 1)
+ (text-mode . 2)
+ (grep . 1)
+ (find-name-dired . 1)
+ (markdown-mode . 1)
+ (livedown-preview . 2)
 )

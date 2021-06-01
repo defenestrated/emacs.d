@@ -5,10 +5,14 @@
       '(
         beginning-of-visual-line
         c-electric-paren
+        c-electric-semi&comma
+        c-electric-slash
         c-electric-star
+        end-of-visual-line
         indent-for-tab-command
         kill-visual-line
         py-electric-colon
+        smex
         wdired-next-line
         wdired-previous-line
         web-mode-element-insert
@@ -16,8 +20,10 @@
 
 (setq mc/cmds-to-run-once
       '(
+        dired-previous-line
         electric-pair-delete-pair
         live-delete-whitespace-except-one
+        mouse-minor-mode-menu
         mouse-set-region
         save-and-run
         wdired-finish-edit

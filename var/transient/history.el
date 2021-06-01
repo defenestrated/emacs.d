@@ -7,4 +7,6 @@
  (magit-push nil)
  (magit-remote
   ("-f"))
- (magit-remote\.<remote>\.*url "https://github.com/defenestrated/blackholesite" "https://github.com/defenestrated/blackholesite/" "https://github.com/defenestrated/blackholesite.git"))
+ (magit-remote\.<remote>\.*url "https://github.com/defenestrated/blackholesite" "https://github.com/defenestrated/blackholesite/" "https://github.com/defenestrated/blackholesite.git")
+ (magit-stash nil
+              ("--include-untracked")))
