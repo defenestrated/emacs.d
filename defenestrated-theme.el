@@ -1,5 +1,5 @@
 (deftheme defenestrated
-  "Created 2017-04-24.")
+  "Created 2021-09-09.")
 
 (custom-theme-set-variables
  'defenestrated
@@ -20,7 +20,7 @@
  '(fringe ((((type graphic)) :foreground "#9f9f9f" :background "#222222")))
  '(header-line ((((type graphic)) :foreground "#f6f0e1" :height 1.13 :box (:line-width 1 :color "#f6f0e1" :style nil))))
  '(highlight ((((type graphic)) :foreground "#000000" :background "#e9e9e9")))
- '(shadow ((((type graphic)) :foreground "#9f9f9f")))
+ '(shadow ((t nil)))
  '(success ((((type graphic)) :foreground "#7fb07f" :weight bold)))
  '(error ((((type graphic)) :foreground "#ea3838" :weight bold)))
  '(warning ((((type graphic)) :foreground "#e8e815")))
@@ -105,7 +105,7 @@
  '(diff-nonexistent ((((type graphic)) :inherit diff-header :foreground "#9f9f9f")))
  '(eldoc-highlight-function-argument ((((type graphic)) :foreground "#7fb07f" :weight bold)))
  '(font-lock-builtin-face ((((type graphic)) :foreground "#dc8cc3")))
- '(font-lock-comment-face ((((type graphic)) :foreground "#3cb370")))
+ '(font-lock-comment-face ((t (:foreground "gray57"))))
  '(font-lock-comment-delimiter-face ((((type graphic)) :inherit font-lock-comment-face)))
  '(font-lock-constant-face ((((type graphic)) :foreground "#2fdbde")))
  '(font-lock-doc-face ((((type graphic)) :foreground "#d0bf8f" :slant italic)))

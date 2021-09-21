@@ -340,7 +340,7 @@
                    "or" "xor" "atan" "abs" "acos" "asin" "cos" "exp"
                    "fix" "fup" "round" "ln" "sin" "tan" "repeat" "endrepeat")))
   '(("\\(#<_?[A-Za-z0-9_]+>\\)" (1 font-lock-type-face))
-    ("\\([NnGgMmFfSsTtOo]\\)" (1 font-lock-function-name-face))
+    ("\\([NnGgMmFfSsTtOo]\\)" (1 font-lock-functiofn-name-face))
     ("\\([XxYyZzAaBbCcUuVvWwIiJjKkPpQqRr]\\)" (1 font-lock-string-face))
     ("\\([\-+]?[0-9]*\\.[0-9]+\\)" (1 font-lock-constant-face))
     ("\\(#[0-9]+\\)" (1 font-lock-type-face))
@@ -348,3 +348,20 @@
   '("\\.ngc\\'")
   nil
   "Generic mode for g-code files.")
+
+
+;; auto dim non-active buffers:
+(add-hook 'after-init-hook (lambda ()
+  (when (fboundp 'auto-dim-other-buffers-mode)
+    (auto-dim-other-buffers-mode t))))
+
+(require 'platformio-mode)
+
+;; Enable ccls for all c++ files, and platformio-mode only
+;; when needed (platformio.ini present in project root).
+(add-hook 'c++-mode-hook (lambda ()
+                           (lsp-deferred)
+                           (platformio-conditionally-enable)))
+
+
+(add-hook 'after-init-hook 'global-linum-mode)
