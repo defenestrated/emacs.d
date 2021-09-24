@@ -1,38 +1,38 @@
 
 ;; ----- smex-history -----
 (
- web-mode
- html-mode
- text-mode
- replace-regexp
+ platformio-mode
+ arduino-mode
  write-file
- markdown-mode
- find-name-dired
+ customize-face
+ auto-dim-other-buffers-mode
+ package-install
+ replace-regexp
 )
 
 ;; ----- smex-data -----
 (
  (ispell-buffer . 1)
- (write-file . 58)
+ (write-file . 62)
  (paredit-mode . 6)
  (js2-mode . 2)
  (jsx-mode . 2)
  (customize-set-variable . 1)
- (eval-last-sexp . 1)
+ (eval-last-sexp . 2)
  (ansi-term . 2)
- (package-install . 12)
+ (package-install . 15)
  (delete-whitespace-rectangle . 2)
  (describe-function . 3)
  (clear-rectangle . 1)
  (hlt-unhighlight-all-prop . 1)
  (hlt-unhighlight-region . 1)
- (revert-buffer . 1)
+ (revert-buffer . 3)
  (read-only-mode . 1)
  (yas-reload-all . 2)
  (recover-this-file . 1)
  (query-replace . 13)
  (adaptive-wrap-prefix-mode . 6)
- (replace-string . 23)
+ (replace-string . 24)
  (prettify-symbols-mode . 2)
  (sgml-pretty-print . 2)
  (yas-insert-snippet . 2)
@@ -43,14 +43,14 @@
  (pwd . 2)
  (query-replace-regexp . 5)
  (replace-regexp . 60)
- (describe-key . 5)
+ (describe-key . 9)
  (processing-mode . 1)
  (jedi:install-server . 7)
  (server-start . 1)
  (erc . 1)
  (indent-region . 2)
  (align-regexp . 2)
- (package-list-packages . 1)
+ (package-list-packages . 2)
  (package-autoremove . 1)
  (package-initialize . 2)
  (company-mode . 3)
@@ -60,9 +60,9 @@
  (delete-horizontal-space . 1)
  (delete-trailing-whitespace . 1)
  (quit-window . 1)
- (customize-face . 1)
+ (customize-face . 12)
  (set-variable . 1)
- (eval-expression . 1)
+ (eval-expression . 2)
  (linum-mode . 2)
  (re-builder . 1)
  (string-inflection-kebab-case . 11)
@@ -75,4 +75,20 @@
  (find-name-dired . 1)
  (markdown-mode . 1)
  (livedown-preview . 2)
+ (eval-buffer . 1)
+ (package-install-selected-packages . 2)
+ (whitespace-mode . 10)
+ (platformio-build . 3)
+ (global-linum-mode . 1)
+ (customize-variable . 1)
+ (customize-mode . 5)
+ (global-set-key . 2)
+ (hs-toggle-hiding . 1)
+ (global-unset-key . 2)
+ (local-unset-key . 1)
+ (local-set-key . 1)
+ (auto-dim-other-buffers-mode . 1)
+ (platformio-mode . 7)
+ (arduino-mode . 5)
+ (platformio-clean . 1)
 )

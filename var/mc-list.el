@@ -4,24 +4,31 @@
 (setq mc/cmds-to-run-for-all
       '(
         beginning-of-visual-line
+        c-electric-brace
+        c-electric-colon
         c-electric-paren
         c-electric-semi&comma
         c-electric-slash
         c-electric-star
+        c-indent-line-or-region
+        electric-newline-and-maybe-indent
         end-of-visual-line
         indent-for-tab-command
         kill-visual-line
         py-electric-colon
         smex
+        wdired--self-insert
         wdired-next-line
         wdired-previous-line
         web-mode-element-insert
+        yas-expand
         ))
 
 (setq mc/cmds-to-run-once
       '(
         dired-previous-line
         electric-pair-delete-pair
+        insert-register
         live-delete-whitespace-except-one
         mouse-minor-mode-menu
         mouse-set-region

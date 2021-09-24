@@ -41,7 +41,7 @@ narrowed."
         (t (narrow-to-defun))))
 
 (winner-mode 1)
-(windmove-default-keybindings)
+;; (windmove-default-keybindings)
 (setq org-replace-disputed-keys t)
 
 (defun kill-current-buffer ()
@@ -393,6 +393,15 @@ narrowed."
 (add-hook 'processing-mode-hook
           (lambda () (local-set-key (kbd "s-R") 'processing-sketch-present)))
 
+(add-hook 'platformio-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-s-b")
+                           (lambda ()
+                             (interactive)
+                             (save-some-buffers "!")
+                             (platformio-build "P"))))
+
+
 ;; company auto-complete:
 
 (with-eval-after-load 'company
@@ -418,4 +427,15 @@ narrowed."
     (goto-char start))
   )
 
+;; add lines after point
+(defun sg-addline-before ()
+  "add new line before point"
+  (interactive)
+  (let ((start (point)))
+    (beginning-of-visual-line)
+    (newline)
+    (goto-char (+ start 1)))
+  )
+
 (global-set-key (kbd "<C-return>") 'sg-addline)
+(global-set-key (kbd "<C-S-return>") 'sg-addline-before)

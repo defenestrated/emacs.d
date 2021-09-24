@@ -11,7 +11,7 @@
 (set-frame-parameter nil 'unsplittable t)
 
 ;; (setq ns-auto-hide-menu-bar t)
-(package-initialize t)
+;; (package-initialize t)
 (tool-bar-mode 0)
 
 (setq-default adaptive-wrap-extra-indent 2)
@@ -275,7 +275,7 @@
 ;; (add-hook 'python-mode-hook #'(lambda () (setq py-python-command "python3")))
 ;; (setq python-shell-interpreter "python3")
 
-(global-set-key (kbd "M-s-ß") (lambda () (interactive) (save-some-buffers "!")))
+(global-set-key (kbd "M-s-s") (lambda () (interactive) (save-some-buffers "!")))
 ;; (global-set-key (kbd "M-x p") 'previous-multiframe-window)
 
 
@@ -299,9 +299,14 @@
 ;; open pde files in processing
 (add-to-list 'auto-mode-alist '("\\.pde\\'" . processing-mode))
 
+;; start platformio with ino files
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
+(add-hook 'arduino-mode #'platformio-mode)
+
+
 ;; scroll one line at a time (less "jumpy" than defaults)
 
-(setq mouse-wheel-scroll-amount '(2 ((shift) . 2))) ;; one line at a time
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 
@@ -365,3 +370,15 @@
 
 
 (add-hook 'after-init-hook 'global-linum-mode)
+
+(global-set-key (kbd "s-H") 'set-selective-display-dlw)
+
+(defun set-selective-display-dlw (&optional level)
+"Fold text indented same of more than the cursor.
+If level is set, set the indent level to LEVEL.
+If 'selective-display' is already set to LEVEL, clicking
+F5 again will unset 'selective-display' by setting it to 0."
+  (interactive "P")
+  (if (eq selective-display (1+ (current-column)))
+      (set-selective-display 0)
+    (set-selective-display (or level (1+ (current-column))))))
