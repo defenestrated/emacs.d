@@ -11,6 +11,7 @@
         c-electric-slash
         c-electric-star
         c-indent-line-or-region
+        comment-or-uncomment-region-or-line
         electric-newline-and-maybe-indent
         end-of-visual-line
         indent-for-tab-command

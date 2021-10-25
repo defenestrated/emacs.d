@@ -28,6 +28,23 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+(setq magit-display-buffer-function
+      (lambda (buffer)
+        (display-buffer
+         buffer
+         (cond ((and (derived-mode-p 'magit-mode)
+                     (eq (with-current-buffer buffer major-mode)
+                         'magit-status-mode))
+                nil)
+               ((memq (with-current-buffer buffer major-mode)
+                      '(magit-process-mode
+                        magit-revision-mode
+                        magit-diff-mode
+                        magit-stash-mode))
+                nil)
+               (t
+                '(display-buffer-same-window))))))
+
 
 ;; indentation
 
@@ -301,7 +318,9 @@
 
 ;; start platformio with ino files
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
-(add-hook 'arduino-mode #'platformio-mode)
+(add-hook 'arduino-mode-hook 'platformio-mode)
+(add-hook 'arduino-mode-hook (lambda () (c-toggle-comment-style -1)))
+;; (eval-after-load "arduino-mode" #'platfomio-mode)
 
 
 ;; scroll one line at a time (less "jumpy" than defaults)
@@ -382,3 +401,5 @@ F5 again will unset 'selective-display' by setting it to 0."
   (if (eq selective-display (1+ (current-column)))
       (set-selective-display 0)
     (set-selective-display (or level (1+ (current-column))))))
+
+(add-hook 'after-init-hook 'scroll-bar-mode 0)

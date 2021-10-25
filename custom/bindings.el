@@ -368,10 +368,18 @@ narrowed."
   '(ace-jump-mode-enable-mark-sync))
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
-;; foldign
+;; folding
 
+;; (eval-after-load "c-mode-map"
+  ;; `(local-unset-key (kbd "C-c C-k")))
+;; (eval-after-load "c-mode-map"
+;; `(local-unset-key (kbd "C-c C-l")))
+(add-hook 'arduino-mode-hook
+          (lambda () (local-unset-key (kbd "C-c C-k"))))
+(add-hook 'arduino-mode-hook
+          (lambda () (local-unset-key (kbd "C-c C-l"))))
 (global-set-key (kbd "C-c C-k") 'hs-toggle-hiding)
-;; (global-set-key (kbd "C-c C-l") 'hs-show-block)
+(global-set-key (kbd "C-c C-l") 'hs-show-block)
 (global-set-key (kbd "C-x p") 'previous-multiframe-window)
 
 
@@ -399,7 +407,7 @@ narrowed."
                            (lambda ()
                              (interactive)
                              (save-some-buffers "!")
-                             (platformio-build "P"))))
+                             (platformio-build "P")))))
 
 
 ;; company auto-complete:
@@ -439,3 +447,6 @@ narrowed."
 
 (global-set-key (kbd "<C-return>") 'sg-addline)
 (global-set-key (kbd "<C-S-return>") 'sg-addline-before)
+
+(global-unset-key (kbd "C-<wheel-down>"))
+(global-unset-key (kbd "C-<wheel-up>"))
