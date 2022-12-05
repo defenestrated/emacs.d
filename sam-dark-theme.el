@@ -3,7 +3,6 @@
 
 (custom-theme-set-faces
  'sam-dark
- '(default ((t (:family "Inconsolata" :foundry "nil" :width normal :height 140 :weight normal :slant normal :underline nil :overline nil :extend nil :strike-through nil :box nil :inverse-video nil :foreground "#DCDCDC" :background "#393c40" :stipple nil :inherit nil))))
  '(cursor ((t (:background "#FFFFFF"))))
  '(fixed-pitch ((t (:family "Monospace"))))
  '(variable-pitch ((((type w32)) (:foundry "outline" :family "Arial")) (t (:family "Sans Serif"))))
@@ -46,6 +45,8 @@
  '(lazy-highlight ((t (:foreground "#d5d2be" :background "#6f6f6f"))))
  '(match ((t (:foreground "#d5d2be" :background "#134b87"))))
  '(next-error ((t (:inherit (region)))))
- '(query-replace ((t (:inherit (isearch))))))
+ '(query-replace ((t (:inherit (isearch)))))
+ '(default ((t (:family "Inconsolata" :foundry "nil" :width normal :height 140 :weight normal :slant normal :underline nil :overline nil :extend nil :strike-through nil :box nil :inverse-video nil :foreground "#DCDCDC" :background "#393c40" :stipple nil :inherit nil))))
+ '(auto-dim-other-buffers-face ((t (:background "gray35")))))
 
 (provide-theme 'sam-dark)
